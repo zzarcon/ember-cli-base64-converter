@@ -6,7 +6,8 @@
 
 > Convert imageUrl to base64 effortless
 
-Simple ember addon that provides a Service to convert imageUrls to base64 in a Promise way.
+Simple ember addon that provides a Service to convert imageUrls to base64 in a Promise way. It uses [DS.PromiseObject](emberjs.com/api/data/classes/DS.PromiseObject.html) to make it easy to access the image content.
+
 
 ## Installation
 

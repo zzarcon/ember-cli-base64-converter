@@ -9,7 +9,16 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {}
     },
-    APP: {}
+    APP: {},
+    contentSecurityPolicy: {
+      'img-src': "* 'self' 'unsafe-inline'",
+      'connect-src': "*",
+      'style-src': "* 'self' 'unsafe-inline'",
+      'report-uri': "*",
+      'script-src': "* 'self' 'unsafe-inline' 'unsafe-eval'",
+      'font-src': "* 'self' 'unsafe-inline' 'unsafe-eval'",
+      'default-src': "* 'self' 'unsafe-inline' 'unsafe-eval'"
+    }
   };
 
   if (environment === 'development') {
