@@ -38,8 +38,7 @@ export default Ember.Service.extend({
         resolve(dataURL);
       };
 
-      //TODO: handle onerror
-      //img.onerror = reject
+      img.onerror = reject;
     });
 
     return DS.PromiseObject.create({promise: promise});
