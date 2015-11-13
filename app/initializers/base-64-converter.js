@@ -1,0 +1,1 @@
+export { default, initialize } from 'ember-cli-base64-converter/initializers/base-64-converter';
