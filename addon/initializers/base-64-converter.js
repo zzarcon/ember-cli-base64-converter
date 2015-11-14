@@ -1,7 +1,6 @@
-import Ember from 'ember';
 import Base64converter from '../services/base-64-converter';
 
-export function initialize(container, application) {
+export function initialize(container) {
   var registerKey = 'service:base64converter';
   var registerName = 'base64converter';
   var inject = container.injection.bind(container);
