@@ -1,8 +1,10 @@
 import Base64converter from '../services/base-64-converter';
 
-export function initialize(application) {
+export function initialize() {
   var registerKey = 'service:base64converter';
   var registerName = 'base64converter';
+  
+  let application = arguments[1] || arguments[0];
 
   application.register(registerKey, Base64converter, {singleton: true});
 
