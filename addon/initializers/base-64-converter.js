@@ -1,18 +1,19 @@
 import Base64converter from '../services/base-64-converter';
 
-export function initialize(container) {
+export function initialize() {
   var registerKey = 'service:base64converter';
   var registerName = 'base64converter';
-  var inject = container.injection.bind(container);
+  
+  let application = arguments[1] || arguments[0];
 
-  container.register(registerKey, Base64converter, {singleton: true});
+  application.register(registerKey, Base64converter, {singleton: true});
 
-  inject('controller', registerName, registerKey);
-  inject('component', registerName, registerKey);
-  inject('model', registerName, registerKey);
-  inject('route', registerName, registerKey);
-  inject('adapter', registerName, registerKey);
-  inject('serializer', registerName, registerKey);
+  application.inject('controller', registerName, registerKey);
+  application.inject('component', registerName, registerKey);
+  application.inject('model', registerName, registerKey);
+  application.inject('route', registerName, registerKey);
+  application.inject('adapter', registerName, registerKey);
+  application.inject('serializer', registerName, registerKey);
 }
 
 export default {
